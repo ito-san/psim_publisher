@@ -1,0 +1,20 @@
+/**:
+  ros__parameters:
+    frame_id: "viewer"
+    pose_x: -75.0
+    pose_y: -5.0
+    pose_z: 0.0
+    orie_x: 0.0
+    orie_y: 0.0
+    orie_z: -0.7
+    orie_w: 0.7
+    cov_x: 0.25
+    cov_y: 0.25
+    goal_pose_x: -55.6841773987
+    goal_pose_y: -6.98879623413
+    goal_pose_z: 0.0
+    goal_orie_x: 0.0
+    goal_orie_y: 0.0
+    goal_orie_z: 0.707106796641
+    goal_orie_w: 0.707106765732
+    duration: 0.0

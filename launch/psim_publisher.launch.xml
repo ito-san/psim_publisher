@@ -1,0 +1,7 @@
+<launch>
+  <arg name="config_file" default="$(find-pkg-share psim_publisher)/config/psim_publisher.yaml"/>
+
+  <node pkg="psim_publisher" exec="psim_publisher" name="psim_publisher" output="screen" respawn="false">
+    <param from="$(var config_file)" />
+  </node>
+</launch>
