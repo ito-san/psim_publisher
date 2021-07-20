@@ -26,8 +26,6 @@
 #include "autoware_vehicle_msgs/msg/engage.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
-#include "std_msgs/msg/bool.hpp"
-#include "std_msgs/msg/string.hpp"
 
 #include "rclcpp/rclcpp.hpp"
 
@@ -47,11 +45,14 @@ protected:
 
   void callbackStatus(const autoware_system_msgs::msg::AutowareState::ConstSharedPtr msg);
 
-  rclcpp::TimerBase::SharedPtr timer_;                                                          //!< @brief timer
-  rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pub_initialpose_; //!< @brief publiser
-  rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pub_goal_;                      //!< @brief publiser
-  rclcpp::Publisher<autoware_vehicle_msgs::msg::Engage>::SharedPtr pub_engage_;                 //!< @brief publiser
-  rclcpp::Subscription<autoware_system_msgs::msg::AutowareState>::SharedPtr sub_state_;         //!< @brief subscriber
+  rclcpp::TimerBase::SharedPtr timer_;  //!< @brief timer
+  rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr
+    pub_initialpose_;                                                       //!< @brief publiser
+  rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pub_goal_;  //!< @brief publiser
+  rclcpp::Publisher<autoware_vehicle_msgs::msg::Engage>::SharedPtr
+    pub_engage_;  //!< @brief publiser
+  rclcpp::Subscription<autoware_system_msgs::msg::AutowareState>::SharedPtr
+    sub_state_;  //!< @brief subscriber
 
   geometry_msgs::msg::PoseWithCovarianceStamped initialpose_;
   geometry_msgs::msg::PoseStamped goal_;
